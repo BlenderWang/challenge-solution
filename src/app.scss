@@ -1,0 +1,69 @@
+:root {
+    --clr-background: #2a2c2f;
+    --clr-background-header: #141517;
+    --clr-grey: #6b6c6f;
+    --clr-light: #a6a8ab;
+    --clr-white: #eff2f5;
+    --clr-accent-red: #db2c47;
+
+    --font-roboto: "Roboto";
+
+    --font-sizing: 14px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway|Roboto|Roboto+Condensed&display=swap");
+
+// media queries mixins
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
+
+// global
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background: var(--clr-background);
+    font-family: var(--font-roboto);
+    font-size: var(--font-sizing);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    font-family: var(--font-roboto), serif;
+    font-size: 1rem;
+    color: var(--clr-light);
+}
+
+i {
+    color: var(--clr-light);
+    font-size: 1.5rem;
+}
