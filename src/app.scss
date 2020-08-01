@@ -5,6 +5,7 @@
     --clr-light: #a6a8ab;
     --clr-white: #eff2f5;
     --clr-accent-red: #db2c47;
+    --clr-accent-blue: #5078bf;
 
     --font-roboto: "Roboto";
 
@@ -12,25 +13,6 @@
 }
 
 @import url("https://fonts.googleapis.com/css?family=Raleway|Roboto|Roboto+Condensed&display=swap");
-
-// media queries mixins
-@mixin media-md {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
-}
-
-@mixin media-lg {
-    @media screen and (min-width: 1024px) {
-        @content;
-    }
-}
-
-@mixin media-xl {
-    @media screen and (min-width: 1600px) {
-        @content;
-    }
-}
 
 // global
 html {
@@ -61,6 +43,15 @@ h6 {
     font-family: var(--font-roboto), serif;
     font-size: 1rem;
     color: var(--clr-light);
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    &:hover {
+        color: var(--clr-accent-red);
+    }
 }
 
 i {
