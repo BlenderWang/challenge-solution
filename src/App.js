@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
+import Definition from "./components/Definition";
 import "./app.scss";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
                 <Logo />
                 <SearchBar />
             </div>
+            <Definition />
         </div>
     );
 }

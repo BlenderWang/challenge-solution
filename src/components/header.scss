@@ -66,6 +66,14 @@
             color: var(--clr-accent-red);
         }
     }
+
+    .fa-sign-in-alt {
+        color: var(--clr-accent-blue);
+
+        &:hover {
+            color: var(--clr-accent-red);
+        }
+    }
 }
 
 .open {
