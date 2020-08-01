@@ -19,11 +19,7 @@ const Header = () => {
                 </li>
                 <li>
                     <Link to="/">
-                        <img
-                            src={BrowseSkills}
-                            alt="browse skills"
-                            className="header--img"
-                        />
+                        <img src={BrowseSkills} alt="browse skills" />
                     </Link>
                 </li>
             </ul>

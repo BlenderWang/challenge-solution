@@ -108,3 +108,24 @@
         font-size: 1.5rem;
     }
 }
+
+@media (min-width: 1600px) {
+    .navbar {
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid var(--clr-grey);
+
+        img {
+            width: auto;
+            height: 2rem;
+        }
+
+        i {
+            font-size: 2rem;
+        }
+
+        h4 {
+            font-size: 1.7rem;
+        }
+    }
+}
