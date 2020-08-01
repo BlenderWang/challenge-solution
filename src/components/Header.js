@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Burger } from "./Burger";
 import BrowseSkills from "../img/profile-main-browse-skills.png";
-import InstagramIcon from "../img/profile-details-------------instagram---fontawesome@2x.png";
 
 import "./header.scss";
 
@@ -29,11 +28,7 @@ const Header = () => {
             <ul className={open ? "ul-right open" : "ul-right"}>
                 <li>
                     <Link to="/">
-                        <img
-                            src={InstagramIcon}
-                            alt="browse skills"
-                            className="icon-instagram"
-                        />
+                        <i className="fab fa-instagram"></i>
                     </Link>
                 </li>
                 <li>

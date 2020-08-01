@@ -64,27 +64,7 @@ i {
     .section--top {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        // justify-items: center;
         align-items: center;
         margin: 0 15vw;
     }
 }
-
-/* .app {
-    display: grid;
-    grid-template-areas:
-        "navbar navbar navbar navbar"
-        ". logo searchbar .";
-
-    .navbar {
-        grid-area: navbar;
-    }
-
-    .logo {
-        grid-area: logo;
-    }
-
-    .search-form {
-        grid-area: searchbar;
-    }
-} */

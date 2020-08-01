@@ -27,6 +27,10 @@
         padding-left: 10px;
         transform: translateY(2px);
     }
+
+    .fa-hashtag {
+        color: var(--clr-accent-red);
+    }
 }
 
 .ul-right {
@@ -56,6 +60,11 @@
         grid-gap: 10px;
         font-size: 1.5rem;
         color: var(--clr-accent-blue);
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: var(--clr-accent-red);
+        }
     }
 }
 
@@ -63,13 +72,14 @@
     transform: translateX(0);
 }
 
-.fa-twitter-square {
+.fa-twitter-square,
+.fa-instagram {
     font-size: 3rem;
-}
+    transition: color 0.3s ease;
 
-.fa-sign-in-alt {
-    font-size: 2rem;
-    color: var(--clr-accent-blue);
+    &:hover {
+        color: var(--clr-accent-blue);
+    }
 }
 
 @media (min-width: 768px) {
@@ -95,12 +105,8 @@
         }
     }
 
-    .icon-instagram {
-        width: 2rem;
-        transform: translateY(2px);
-    }
-
-    .fa-twitter-square {
+    .fa-twitter-square,
+    .fa-instagram {
         font-size: 2rem;
     }
 
