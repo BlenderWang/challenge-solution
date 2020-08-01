@@ -1,0 +1,19 @@
+.logo {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15vh;
+    margin-bottom: 2vh;
+    width: 50%;
+
+    @media (min-width: 768px) {
+        width: 35%;
+    }
+
+    @media (min-width: 1100px) {
+        left: initial;
+        transform: initial;
+        margin-top: 6rem;
+        width: 55%;
+    }
+}

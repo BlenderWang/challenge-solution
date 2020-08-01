@@ -8,9 +8,10 @@ function App() {
     return (
         <div className="app">
             <Header />
-            <div style={{ height: "5rem" }} />
-            <Logo />
-            <SearchBar />
+            <div className="section--top">
+                <Logo />
+                <SearchBar />
+            </div>
         </div>
     );
 }
