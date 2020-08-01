@@ -7,13 +7,7 @@ import InstagramIcon from "../img/profile-details-------------instagram---fontaw
 import "./header.scss";
 
 const Header = () => {
-    // const [collapsed, setCollapsed] = useState(true);
     const [open, setOpen] = useState(false);
-
-    /* const toggle = () => {
-        setCollapsed(!collapsed);
-        setOpen(!open);
-    }; */
 
     return (
         <nav className="navbar">
