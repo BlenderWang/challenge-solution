@@ -28,21 +28,19 @@ const Header = () => {
                 <div className="header--icon-burger" onClick={toggle}>
                     <i className="fas fa-bars"></i>
                 </div>
+            </div>
 
-                <div
-                    className={isOpen ? "header--menu" : `header--menu hidden`}
-                >
-                    <img
-                        src={InstagramIcon}
-                        alt="browse skills"
-                        className="header--icon-instagram"
-                    />
-                    <i className="fab fa-twitter-square"></i>
-                    <h4>
-                        Login
-                        <i className="fas fa-sign-in-alt"></i>
-                    </h4>
-                </div>
+            <div className={isOpen ? "header--menu" : `header--menu hidden`}>
+                <img
+                    src={InstagramIcon}
+                    alt="browse skills"
+                    className="header--icon-instagram"
+                />
+                <i className="fab fa-twitter-square"></i>
+                <h4>
+                    Login
+                    <i className="fas fa-sign-in-alt"></i>
+                </h4>
             </div>
         </div>
     );
