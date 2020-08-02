@@ -9,18 +9,19 @@ const Details = () => {
         <div className="details-container">
             {dummyData.details.map((data) => (
                 <section key={data.id}>
-                    <div className="img-container">
-                        <img src={data.src} alt={data.id} />
-                    </div>
-                    {/* <div
+                    <div
                         style={{
-                            backgroundImage: `url('../img/favicon.png')`,
-                            backgroundPosition: "center",
-                            width: "100",
+                            backgroundImage: `url(${data.src})`,
+                            backgroundPosition: "center 25%",
+                            backgroundSize: "cover",
+                            width: "10rem",
+                            height: "10rem",
+                            borderRadius: "5px",
                         }}
-                        className="project-image"
+                        key={data.id}
+                        className="img-container"
                         id={data.name}
-                    /> */}
+                    ></div>
                     <h3>{data.name}</h3>
                     <p>{data.excerpt}</p>
                     <div className="skills-group">

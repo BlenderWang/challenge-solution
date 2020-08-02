@@ -4,7 +4,7 @@ const dummyData = {
     details: [
         {
             id: uuid(),
-            src: `/images/search-results--filters-profile-pic 2@2x.png`,
+            src: `/images/search-results--filters-profile-pic2@2x.png`,
             name: "JAMES HOWLETT",
             excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor. I’ve worked with many professional film teams.`,
@@ -14,7 +14,7 @@ const dummyData = {
         },
         {
             id: uuid(),
-            src: "/images/search-results--filters-profile-pic 1@2x.png",
+            src: "/images/search-results--filters-profile-pic1@2x.png",
             name: "ANNE KEELER",
             excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor. I’ve worked with many professional film teams.`,

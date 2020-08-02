@@ -18,9 +18,9 @@
     .img-container {
         width: 15rem;
         height: auto;
-        border-radius: 5px;
 
         img {
+            border-radius: 5px;
             width: 100%;
             clip-path: polygon(25% 0%, 75% 0%, 75% 90%, 25% 90%);
         }
