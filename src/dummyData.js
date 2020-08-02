@@ -8,8 +8,8 @@ const dummyData = {
             name: "JAMES HOWLETT",
             excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor. I’ve worked with many professional film teams.`,
-            tags: ["VFX Engineer", "3D Animation", "Editor +2"],
-            score: 667,
+            tags: ["VFX Engineer, ", "3D Animation, ", "Editor +2"],
+            skills: 667,
             location: "Berlin, Germany",
         },
         {
@@ -18,8 +18,8 @@ const dummyData = {
             name: "ANNE KEELER",
             excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor. I’ve worked with many professional film teams.`,
-            tags: ["Motion Capture Artist", "Photographer"],
-            score: 722,
+            tags: ["Motion Capture Artist, ", "Photographer"],
+            skills: 722,
             location: "Berlin, Germany",
         },
         {
@@ -28,8 +28,8 @@ const dummyData = {
             name: "HANNAH SKEPPSTAD",
             excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor. I’ve worked with many professional film teams.`,
-            tags: ["3D Animation", "VFX Engineer", "Sound Editor +2"],
-            score: 471,
+            tags: ["3D Animation, ", "VFX Engineer, ", "Sound Editor +2"],
+            skills: 471,
             location: "Berlin, Germany",
         },
     ],

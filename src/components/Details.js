@@ -1,27 +1,45 @@
 import React from "react";
 import dummyData from "../dummyData.js";
-import scoreIcon from "../img/profile-details-------------2bars@2x.png";
+import skillsIcon from "../img/profile-details-------------2bars@2x.png";
 import searchResultsIcon from "../img/search-results--filters-brandenburggate1600 2@2x.png";
+import "./details.scss";
 
 const Details = () => {
     return (
         <div className="details-container">
             {dummyData.details.map((data) => (
                 <section key={data.id}>
-                    <img src={data.src} alt={data.id} />
+                    <div className="img-container">
+                        <img src={data.src} alt={data.id} />
+                    </div>
+                    {/* <div
+                        style={{
+                            backgroundImage: `url('../img/favicon.png')`,
+                            backgroundPosition: "center",
+                            width: "100",
+                        }}
+                        className="project-image"
+                        id={data.name}
+                    /> */}
                     <h3>{data.name}</h3>
                     <p>{data.excerpt}</p>
-                    <div className="score-group">
-                        <img src={scoreIcon} alt="bars" />
-                        {data.score}
+                    <div className="skills-group">
+                        <img src={skillsIcon} alt="bars" />
+                        {data.skills}
                     </div>
-                    <div className="tags-group">
-                        <i className="fas fa-hashtag"></i>
-                        {data.tags}
-                    </div>
-                    <div className="location">
-                        <img src={searchResultsIcon} alt="Search Result Icon" />
-                        {data.location}
+
+                    <div className="dark">
+                        <div className="tags-group">
+                            <i className="fas fa-hashtag"></i>
+                            {data.tags}
+                        </div>
+                        <div className="location">
+                            <img
+                                src={searchResultsIcon}
+                                alt="Search Result Icon"
+                            />
+                            {data.location}
+                        </div>
                     </div>
                 </section>
             ))}
