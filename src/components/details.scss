@@ -90,4 +90,81 @@
     .fa-hashtag {
         margin-right: 10px;
     }
+
+    @media (min-width: 768px) {
+        width: 60%;
+
+        p {
+            font-size: 1rem;
+            max-width: 75%;
+        }
+    }
+
+    @media (min-width: 1100px) {
+        width: 65%;
+
+        section {
+            grid-template-columns: initial;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-areas:
+                ". name skills"
+                ". excerpt skills"
+                "others others others";
+        }
+
+        .img-container {
+            position: absolute;
+            left: 18.5vw;
+        }
+
+        h3,
+        p {
+            grid-area: name;
+            justify-self: start;
+            padding-left: 2rem;
+        }
+
+        p {
+            grid-area: excerpt;
+            margin: 0;
+            text-align: left;
+        }
+
+        .skills-group {
+            grid-area: skills;
+
+            img {
+                width: 2.75rem;
+                height: 20px;
+            }
+        }
+
+        .dark {
+            grid-area: others;
+
+            // flex-direction: row;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            padding-left: 10rem;
+        }
+    }
+
+    @media (min-width: 1550px) {
+        section {
+            padding: 1.25em 0 1.4em;
+        }
+
+        .img-container {
+            z-index: 3;
+        }
+
+        p {
+            max-width: 100%;
+        }
+
+        .dark {
+            padding-left: 7rem;
+            transform: translateY(1.5em);
+        }
+    }
 }
