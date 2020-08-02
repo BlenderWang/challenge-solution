@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
 import Definition from "./components/Definition";
+import Details from "./components/Details";
 import "./app.scss";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                 <SearchBar />
             </div>
             <Definition />
+            <Details />
         </div>
     );
 }
