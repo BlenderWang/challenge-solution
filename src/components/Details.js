@@ -7,7 +7,7 @@ const Details = () => {
     return (
         <div className="details-container">
             {dummyData.details.map((data) => (
-                <Card data={data} />
+                <Card key={data.id} data={data} />
             ))}
         </div>
     );
