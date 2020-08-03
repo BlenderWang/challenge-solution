@@ -6,6 +6,7 @@
     --clr-white: #eff2f5;
     --clr-accent-red: #db2c47;
     --clr-accent-blue: #5078bf;
+    --clr-accent-green: #3adab7;
 
     --font-roboto: "Roboto Condensed";
     --font-sources: "Source Sans Pro";
@@ -48,6 +49,7 @@ h6 {
 
 a {
     text-decoration: none;
+    color: var(--clr-light);
     transition: color 0.3s linear;
 
     &:hover {
@@ -70,6 +72,10 @@ i {
         transform: rotate(360deg);
         transition: all 0.3s ease-in-out;
     }
+}
+
+.main {
+    min-height: calc(88vh - 7rem);
 }
 
 // main page styling

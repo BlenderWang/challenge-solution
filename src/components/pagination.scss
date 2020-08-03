@@ -1,0 +1,48 @@
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto 2rem;
+
+    h4 {
+        margin-right: 1em;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: var(--clr-light);
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--clr-accent-red);
+        }
+    }
+
+    .previous,
+    .next {
+        font-size: 2rem;
+        transform: translateY(-3px);
+    }
+
+    .page-numbers-container {
+        padding: 0 2em;
+        display: flex;
+
+        button {
+            font-family: var(--font-roboto), sans-serif;
+            font-size: 1.1rem;
+            padding: 0 5px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        width: 60%;
+    }
+
+    @media (min-width: 1100px) {
+        width: 65%;
+    }
+}
