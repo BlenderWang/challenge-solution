@@ -32,6 +32,46 @@ const dummyData = {
             skills: 471,
             location: "Berlin, Germany",
         },
+        {
+            id: uuid(),
+            src: `https://source.unsplash.com/user/erondu`,
+            name: "SINCLAIR BENETTE",
+            excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. I’ve worked with many professional film teams.`,
+            tags: ["VFX Engineer, ", "3D Animation, ", "Editor +2"],
+            skills: Math.floor(Math.random() * 1000),
+            location: "New York, USA",
+        },
+        {
+            id: uuid(),
+            src: "https://source.unsplash.com/random",
+            name: "LISA BRET",
+            excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. I’ve worked with many professional film teams.`,
+            tags: ["Motion Capture Artist, ", "Photographer"],
+            skills: Math.floor(Math.random() * 1000),
+            location: "New York, USA",
+        },
+        {
+            id: uuid(),
+            src:
+                "https://res.cloudinary.com/shirlzzz9/image/upload/v1550687976/Misc/cover002.jpg",
+            name: "ERVIN HOWELL",
+            excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. I’ve worked with many professional film teams.`,
+            tags: ["3D Animation, ", "VFX Engineer, ", "Sound Editor +2"],
+            skills: Math.floor(Math.random() * 1000),
+            location: "New York, USA",
+        },
+        {
+            id: uuid(),
+            src:
+                "https://res.cloudinary.com/shirlzzz9/image/upload/v1591357726/medium_riceball_77db271242.png",
+            name: "CLEMENTIE BAUCH",
+            excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. I’ve worked with many professional film teams.`,
+            skills: Math.floor(Math.random() * 1000),
+        },
     ],
     searches: [
         "#3Danimation",
@@ -40,7 +80,7 @@ const dummyData = {
         "#SFXcoordinator",
         "CGIartist",
     ],
-    locations: ["All Cities", "Stocks", "Berlin", "New York"],
+    locations: ["All Cities", "Stockholm", "Berlin", "New York"],
 };
 
 export default dummyData;

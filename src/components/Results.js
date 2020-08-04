@@ -1,33 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 import skillsIcon from "../img/profile-details-------------2bars@2x.png";
 import searchResultsIcon from "../img/search-results--filters-brandenburggate1600 2@2x.png";
 
-function getRandomCategories() {
-    const categories = [
-        "#3Danimation",
-        "#Visualeffects",
-        "#MotionCaptureArtist",
-        "#SFXcoordinator",
-        "CGIartist",
-    ];
-    return categories
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 3)
-        .join(", ");
-}
-
-function getRandomCity(max) {
-    const locations = ["Stockholm, Sweden", "Berlin, Germany", "New York, USA"];
-    const idx = Math.floor(Math.random() * Math.floor(max));
-    return locations[idx];
-}
-
-const Card = ({ data }) => {
+const Results = ({ data }) => {
     return (
         <section key={data.id}>
             <div
                 style={{
-                    backgroundImage: `url(${data.src})`,
+                    backgroundImage: `url(${data.url})`,
                     backgroundPosition: "center 25%",
                     backgroundSize: "cover",
                     width: "10rem",
@@ -36,27 +17,32 @@ const Card = ({ data }) => {
                 }}
                 key={data.id}
                 className="img-container"
-                id={data.name}
+                id={data.title}
             ></div>
-            <h3>{data.name}</h3>
-            <p>{data.excerpt}</p>
+            <h3>{data.title}</h3>
+            {/* <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor. I’ve worked with many professional film teams.
+            </p>
             <div className="skills-group">
                 <img src={skillsIcon} alt="bars" />
-                {data.skills}
+                665
             </div>
 
             <div className="dark">
                 <div className="tags-group">
                     <i className="fas fa-hashtag"></i>
-                    {getRandomCategories(3)}
+                    #3Danimation, #Visualeffects, #MotionCaptureArtist
                 </div>
                 <div className="location">
                     <img src={searchResultsIcon} alt="Search Result Icon" />
-                    {getRandomCity(3)}
+                    Berlin, Germany
                 </div>
-            </div>
+            </div> */}
         </section>
     );
 };
 
-export default Card;
+Results.propTypes = {};
+
+export default Results;
