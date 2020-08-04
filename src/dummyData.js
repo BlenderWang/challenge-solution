@@ -1,5 +1,25 @@
 import { v1 as uuid } from "uuid";
 
+function getRandomCategories() {
+    const categories = [
+        "3Danimation",
+        "Visualeffects",
+        "MotionCaptureArtist",
+        "SFXcoordinator",
+        "CGIartist",
+    ];
+    return categories
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3)
+        .join(", ");
+}
+
+function getRandomCity(max) {
+    const locations = ["Stockholm, Sweden", "Berlin, Germany", "New York, USA"];
+    const idx = Math.floor(Math.random() * Math.floor(max));
+    return locations[idx];
+}
+
 const dummyData = {
     details: [
         {
@@ -10,7 +30,7 @@ const dummyData = {
             tempor. I’ve worked with many professional film teams.`,
             tags: ["VFX Engineer, ", "3D Animation, ", "Editor +2"],
             skills: 667,
-            location: "Berlin, Germany",
+            location: getRandomCity(3),
         },
         {
             id: uuid(),
@@ -20,7 +40,7 @@ const dummyData = {
             tempor. I’ve worked with many professional film teams.`,
             tags: ["Motion Capture Artist, ", "Photographer"],
             skills: 722,
-            location: "Berlin, Germany",
+            location: getRandomCity(3),
         },
         {
             id: uuid(),
@@ -30,7 +50,7 @@ const dummyData = {
             tempor. I’ve worked with many professional film teams.`,
             tags: ["3D Animation, ", "VFX Engineer, ", "Sound Editor +2"],
             skills: 471,
-            location: "Berlin, Germany",
+            location: getRandomCity(3),
         },
         {
             id: uuid(),
@@ -38,9 +58,9 @@ const dummyData = {
             name: "SINCLAIR BENETTE",
             excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor. I’ve worked with many professional film teams.`,
-            tags: ["VFX Engineer, ", "3D Animation, ", "Editor +2"],
+            tags: getRandomCategories(3),
             skills: Math.floor(Math.random() * 1000),
-            location: "New York, USA",
+            location: getRandomCity(3),
         },
         {
             id: uuid(),
@@ -48,20 +68,20 @@ const dummyData = {
             name: "LISA BRET",
             excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor. I’ve worked with many professional film teams.`,
-            tags: ["Motion Capture Artist, ", "Photographer"],
+            tags: getRandomCategories(3),
             skills: Math.floor(Math.random() * 1000),
-            location: "New York, USA",
+            location: getRandomCity(3),
         },
         {
             id: uuid(),
             src:
-                "https://res.cloudinary.com/shirlzzz9/image/upload/v1550687976/Misc/cover002.jpg",
+                "https://res.cloudinary.com/shirlzzz9/image/upload/v1543779272/Grid_Img_Gallery/4.jpg",
             name: "ERVIN HOWELL",
             excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor. I’ve worked with many professional film teams.`,
-            tags: ["3D Animation, ", "VFX Engineer, ", "Sound Editor +2"],
+            tags: getRandomCategories(3),
             skills: Math.floor(Math.random() * 1000),
-            location: "New York, USA",
+            location: getRandomCity(3),
         },
         {
             id: uuid(),
@@ -70,7 +90,9 @@ const dummyData = {
             name: "CLEMENTIE BAUCH",
             excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor. I’ve worked with many professional film teams.`,
+            tags: getRandomCategories(3),
             skills: Math.floor(Math.random() * 1000),
+            location: getRandomCity(3),
         },
     ],
     searches: [
@@ -78,7 +100,7 @@ const dummyData = {
         "#Visualeffects",
         "#MotionCaptureArtist",
         "#SFXcoordinator",
-        "CGIartist",
+        "#CGIartist",
     ],
     locations: ["All Cities", "Stockholm", "Berlin", "New York"],
 };
