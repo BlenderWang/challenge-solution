@@ -1,41 +1,19 @@
-import React, { useState } from "react";
-/* import {
-    next,
-    prev,
-    jump,
-    currentData,
-    currentPage,
-    maxPage,
-} from ("./usePagination"); */
+import React from "react";
 import "./pagination.scss";
 
-const pageNumbers = [1, 2, 3, 4, 5, 6];
+const Pagination = ({ itemsPerPage, totalItems, jump, onPrev, onNext }) => {
+    const pageNumbers = [];
 
-const Pagination = (data, itemsPerPage) => {
-    const [currentPage, setCurrentPage] = useState(1);
-    const maxPage = Math.ceil(data.length / itemsPerPage);
-
-    const next = () => {
-        console.log(currentPage);
-        setCurrentPage((currentPage) => Math.min(currentPage + 1, maxPage));
-    };
-
-    const prev = () => {
-        console.log(currentPage);
-        setCurrentPage((currentPage) => Math.max(currentPage - 1, 1));
-    };
-
-    const jump = (page) => {
-        const pageNumber = Math.max(1, page);
-        setCurrentPage((currentPage) => Math.min(pageNumber, maxPage));
-    };
+    for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
+        pageNumbers.push(i);
+    }
 
     return (
         <div className="pagination">
             <h4>PAGE</h4>
             <button
                 onClick={() => {
-                    prev();
+                    onPrev();
                 }}
                 className="previous"
             >
@@ -46,7 +24,6 @@ const Pagination = (data, itemsPerPage) => {
                     <button
                         key={page}
                         onClick={() => {
-                            console.log("jump to", page);
                             jump(page);
                         }}
                     >
@@ -56,7 +33,7 @@ const Pagination = (data, itemsPerPage) => {
             </div>
             <button
                 onClick={() => {
-                    next();
+                    onNext();
                 }}
                 className="next"
             >

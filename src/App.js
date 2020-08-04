@@ -3,8 +3,8 @@ import Header from "./components/Header";
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
 import Definition from "./components/Definition";
-import Details from "./components/Details";
-import Pagination from "./components/Pagination";
+import DetailsWrapper from "./components/DetailsWrapper";
+// import Details from "./components/Details";
 import Footer from "./components/Footer";
 import "./app.scss";
 
@@ -18,8 +18,8 @@ function App() {
                     <SearchBar />
                 </div>
                 <Definition />
-                <Details />
-                <Pagination />
+                {/* <Details /> */}
+                <DetailsWrapper />
             </main>
             <Footer />
         </div>
