@@ -4,7 +4,7 @@ import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
 import Definition from "./components/Definition";
 import DetailsWrapper from "./components/DetailsWrapper";
-// import Details from "./components/Details";
+import Locations from "./components/Locations";
 import Footer from "./components/Footer";
 import "./app.scss";
 
@@ -18,8 +18,8 @@ function App() {
                     <SearchBar />
                 </div>
                 <Definition />
-                {/* <Details /> */}
                 <DetailsWrapper />
+                <Locations />
             </main>
             <Footer />
         </div>

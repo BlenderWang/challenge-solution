@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "JAMES HOWLETT",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+        "tags": ["VFX Engineer, ", "3D Animation, ", "Editor +2"],
+        "skills": 667,
+        "location": "Berlin, Germany"
+    },
+    {
+        "id": 2,
+        "name": "PETER PANDE",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["Motion Capture Artist, ", "Photographer"],
+        "skills": 667,
+        "location": "New York, USA"
+    },
+    {
+        "id": 3,
+        "name": "HANNAH SKEPPSTAD",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["3D Animation, ", "VFX Engineer, ", "Sound Editor +2"],
+        "skills": 447,
+        "location": "Stockholm Sweden"
+    },
+    {
+        "id": 4,
+        "name": "SINCLAIR BENETTE",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["Motion Capture Artist, ", "Photographer"],
+        "skills": 597,
+        "location": "Stockholm Sweden"
+    },
+    {
+        "id": 5,
+        "name": "LISA BRET",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["3D Animation, ", "VFX Engineer, ", "Sound Editor +2"],
+        "skills": 553,
+        "location": "Berlin, Germany"
+    },
+    {
+        "id": 6,
+        "name": "DENNIS SCHULIST",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["Motion Capture Artist, ", "Photographer"],
+        "skills": 553,
+        "location": "New York, USA"
+    },
+    {
+        "id": 7,
+        "name": "CLEMENTIE DUBUQUE",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["Motion Capture Artist, ", "Photographer"],
+        "skills": 553,
+        "location": "Berlin, Germany"
+    },
+    {
+        "id": 8,
+        "name": "GLENNA REICHERT",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["Motion Capture Artist, ", "Photographer"],
+        "skills": 553,
+        "location": "Berlin, Germany"
+    },
+    {
+        "id": 9,
+        "name": "NICOLAS RUNOLFSDOTTIR",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["3D Animation, ", "VFX Engineer, ", "Sound Editor +2"],
+        "skills": 553,
+        "location": "New York, USA"
+    },
+    {
+        "id": 10,
+        "name": "KURTIS WEISSSNAT",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["Motion Capture Artist, ", "Photographer"],
+        "skills": 553,
+        "location": "Berlin, Germany"
+    },
+    {
+        "id": 11,
+        "name": "GEMMA WU",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["3D Animation, ", "VFX Engineer, ", "Sound Editor +2"],
+        "skills": 447,
+        "location": "New York, USA"
+    },
+    {
+        "id": 12,
+        "name": "lOUIE ROD",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["Motion Capture Artist, ", "Photographer"],
+        "skills": 512,
+        "location": "Stockholm Sweden"
+    },
+    {
+        "id": 13,
+        "name": "CORA CHOU",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["3D Animation, ", "VFX Engineer, ", "Sound Editor +2"],
+        "skills": 489,
+        "location": "New York, USA"
+    },
+    {
+        "id": 14,
+        "name": "HANNAH MONTANA",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. I’ve worked with many professional film teams.",
+        "tags": ["Motion Capture Artist, ", "Photographer"],
+        "skills": 384,
+        "location": "Stockholm Sweden"
+    }
+]

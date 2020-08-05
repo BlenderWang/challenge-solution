@@ -94,6 +94,77 @@ const dummyData = {
             skills: Math.floor(Math.random() * 1000),
             location: getRandomCity(3),
         },
+        {
+            id: uuid(),
+            src: "/images/search-results--filters-profile-pic@2x.png",
+            name: "PATRICIA LEBRACK",
+            excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. I’ve worked with many professional film teams.`,
+            tags: getRandomCategories(3),
+            skills: Math.floor(Math.random() * 1000),
+            location: getRandomCity(3),
+        },
+        {
+            id: uuid(),
+            src: `/images/search-results--filters-profile-pic1@2x.png`,
+            name: "CHELSEA DIETRICH",
+            excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. I’ve worked with many professional film teams.`,
+            tags: getRandomCategories(3),
+            skills: Math.floor(Math.random() * 1000),
+            location: getRandomCity(3),
+        },
+        {
+            id: uuid(),
+            src: "https://source.unsplash.com/random",
+            name: "DENNIS SCHULIST",
+            excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. I’ve worked with many professional film teams.`,
+            tags: getRandomCategories(3),
+            skills: Math.floor(Math.random() * 1000),
+            location: getRandomCity(3),
+        },
+        {
+            id: uuid(),
+            src:
+                "https://res.cloudinary.com/shirlzzz9/image/upload/v1589447881/thumbnail_iphone_test_denoised_b047e99085.png",
+            name: "CLEMENTIE DUBUQUE",
+            excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. I’ve worked with many professional film teams.`,
+            tags: getRandomCategories(3),
+            skills: Math.floor(Math.random() * 1000),
+            location: getRandomCity(3),
+        },
+        {
+            id: uuid(),
+            src: "/images/search-results--filters-profile-pic2@2x.png",
+            name: "GLENNA REICHERT",
+            excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. I’ve worked with many professional film teams.`,
+            tags: getRandomCategories(3),
+            skills: Math.floor(Math.random() * 1000),
+            location: getRandomCity(3),
+        },
+        {
+            id: uuid(),
+            src: `https://source.unsplash.com/user/erondu`,
+            name: "NICOLAS RUNOLFSDOTTIR",
+            excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. I’ve worked with many professional film teams.`,
+            tags: getRandomCategories(3),
+            skills: Math.floor(Math.random() * 1000),
+            location: getRandomCity(3),
+        },
+        {
+            id: uuid(),
+            src: "https://source.unsplash.com/random",
+            name: "KURTIS WEISSSNAT",
+            excerpt: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. I’ve worked with many professional film teams.`,
+            tags: getRandomCategories(3),
+            skills: Math.floor(Math.random() * 1000),
+            location: getRandomCity(3),
+        },
     ],
     searches: [
         "#3Danimation",
