@@ -1,0 +1,24 @@
+.categories-wrapper {
+    position: absolute;
+    top: 29%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .title {
+        text-transform: uppercase;
+        margin-bottom: 0.7em;
+    }
+
+    .category {
+        &-name {
+            text-align: center;
+            color: var(--clr-accent-red);
+            font-size: var(--font-sizing);
+            padding-bottom: 0.5em;
+        }
+
+        &-name:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+}

@@ -166,7 +166,7 @@ const dummyData = {
             location: getRandomCity(3),
         },
     ],
-    searches: [
+    categories: [
         "#3Danimation",
         "#Visualeffects",
         "#MotionCaptureArtist",

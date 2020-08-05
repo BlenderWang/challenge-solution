@@ -5,6 +5,7 @@ import SearchBar from "./components/SearchBar";
 import Definition from "./components/Definition";
 import DetailsWrapper from "./components/DetailsWrapper";
 import Locations from "./components/Locations";
+import Categories from "./components/Categories";
 import Footer from "./components/Footer";
 import "./app.scss";
 
@@ -20,6 +21,7 @@ function App() {
                 <Definition />
                 <DetailsWrapper />
                 <Locations />
+                <Categories />
             </main>
             <Footer />
         </div>
