@@ -1,8 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import dummyData from "../dummyData";
+import LocationBtn from "./LocationBtn";
 import "./locations.scss";
 
 const Locations = () => {
+    const [btnClicked, setBtnClicked] = useState(false);
+
+    const filterLocation = () => {
+        // dummyData.details.filter(detail => detail.location)
+        console.log("filter");
+    };
+
+    useEffect(() => {
+        window.addEventListener("click", filterLocation);
+    }, []);
+
     return (
         <div className="location-wrapper">
             <h3>sort results</h3>
@@ -11,20 +23,15 @@ const Locations = () => {
                     <h2>Locations</h2>
                     <i className="fas fa-chevron-down"></i>
                 </div>
-                <ul className="locations-list">
-                    <li>
-                        <Link to="/">All Cities</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Stockholm</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Berlin</Link>
-                    </li>
-                    <li>
-                        <Link to="/">New York</Link>
-                    </li>
-                </ul>
+                <div className="locations-btns">
+                    {dummyData.locations.map((location) => (
+                        <LocationBtn
+                            key={location}
+                            text={location}
+                            onClick={() => setBtnClicked(!btnClicked)}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

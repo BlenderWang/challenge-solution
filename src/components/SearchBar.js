@@ -33,14 +33,14 @@ const SearchBar = () => {
                     name="query"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="i.e. John Doe"
+                    placeholder="i.e. Berlin"
                 />
                 <i className="fas fa-search"></i>
             </form>
 
             <div className="search-results">
                 {results
-                    .filter((result) => result.location === "New York, USA")
+                    .filter((result) => result.location === { query })
                     .map((result) => (
                         <Card key={result.id} data={result} />
                     ))}

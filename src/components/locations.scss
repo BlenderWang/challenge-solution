@@ -23,7 +23,7 @@
             &-title {
                 padding: 0.6em 10px;
                 width: 8rem;
-                border: 3px solid var(--clr-accent-red);
+                border: 3px solid var(--clr-accent-yellow);
                 border-radius: 5px;
                 background-color: transparent;
                 display: flex;
@@ -41,20 +41,41 @@
                 }
             }
 
-            &-list {
+            &-btns {
                 margin: 0 auto;
-                list-style: none;
                 width: 7.8rem;
                 background-color: lighten(#2a2c2f, 2%);
                 padding: 2em 10px;
                 border-radius: 5px;
 
-                li {
+                .btn-group {
+                    display: flex;
+                    align-items: center;
                     margin-bottom: 10px;
+
+                    i {
+                        font-size: 12px;
+                        margin-right: 5px;
+                    }
                 }
 
-                li:last-of-type {
+                .btn-group:last-of-type {
                     margin-bottom: 0;
+                }
+
+                .btn {
+                    display: block;
+                    border: none;
+                    background-color: transparent;
+                    color: var(--clr-white);
+                    font-size: var(--font-sizing);
+                    cursor: pointer;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: var(--clr-accent-yellow);
+                    }
                 }
             }
         }
