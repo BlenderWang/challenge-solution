@@ -167,11 +167,36 @@ const dummyData = {
         },
     ],
     categories: [
-        "#3Danimation",
-        "#Visualeffects",
-        "#MotionCaptureArtist",
-        "#SFXcoordinator",
-        "#CGIartist",
+        {
+            id: uuid(),
+            name: "#3Danimation",
+            definition:
+                "#3D animation is at the heart of games and virtual reality, but it may also be used in presentation graphics to add flair to the visuals. ",
+        },
+        {
+            id: uuid(),
+            name: "#Visualeffects",
+            definition:
+                "#VFXengineers are beings who create illusions or visual tricks used in the film, television, theatre, video game and similar  industries to simulate the imagined events in a story or virtual world.",
+        },
+        {
+            id: uuid(),
+            name: "#MotionCaptureArtist",
+            definition:
+                "#Motion Capture (sometimes referred as mo-cap or mocap, for short) is the process of recording the movement of objects or people. ",
+        },
+        {
+            id: uuid(),
+            name: "#SFXcoordinator",
+            definition:
+                "#SFXcoordinator or Special Effects Supervisor is an individual who works on a commercial, theater, television or film set creating special effects. The supervisor generally is the department head who defers to the film's director and/or producers, and who is in charge of the entire special effects team.",
+        },
+        {
+            id: uuid(),
+            name: "#CGIartist",
+            definition:
+                "#CGIArtists (also known as computer graphics artists) create 2D and 3D assets used in developing video games and digitally animated films. A CG artist's work usually revolves around finding balance between artistic sensibilities and technical limitations while working within a development team.",
+        },
     ],
     locations: ["All Cities", "Stockholm", "Berlin", "New York"],
 };

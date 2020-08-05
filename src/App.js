@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
-import Definition from "./components/Definition";
+// import Definition from "./components/Definition";
 import DetailsWrapper from "./components/DetailsWrapper";
 import Locations from "./components/Locations";
 import Categories from "./components/Categories";
@@ -18,10 +18,10 @@ function App() {
                     <Logo />
                     <SearchBar />
                 </div>
-                <Definition />
+                <Categories />
+                {/* <Definition /> */}
                 <DetailsWrapper />
                 <Locations />
-                <Categories />
             </main>
             <Footer />
         </div>
