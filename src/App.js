@@ -18,10 +18,10 @@ function App() {
                     <Logo />
                     <SearchBar />
                 </div>
+                <Locations />
                 <Categories />
                 {/* <Definition /> */}
                 <DetailsWrapper />
-                <Locations />
             </main>
             <Footer />
         </div>

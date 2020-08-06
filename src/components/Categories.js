@@ -28,12 +28,14 @@ const Categories = () => {
                     <h6>Definition</h6>
                 </div>
 
-                {dummyData.categories.map((category) => (
-                    <DefinitionParagraph
-                        paragraph={category.definition}
-                        key={category.id}
-                    />
-                ))}
+                <div className="definition--body">
+                    {dummyData.categories.map((category) => (
+                        <DefinitionParagraph
+                            paragraph={category.definition}
+                            key={category.id}
+                        />
+                    ))}
+                </div>
             </div>
         </>
     );

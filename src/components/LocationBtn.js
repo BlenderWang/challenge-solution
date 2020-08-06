@@ -1,8 +1,8 @@
 import React from "react";
 
-const LocationBtn = ({ text, onClick }) => {
+const LocationBtn = ({ text, onClick, color }) => {
     return (
-        <div className="btn-group">
+        <div className={color ? "btn-group red" : "btn-group"}>
             <i className="fas fa-circle"></i>
             <button className="btn" onClick={onClick}>
                 {text}

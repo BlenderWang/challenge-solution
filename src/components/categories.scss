@@ -1,11 +1,12 @@
 .categories-wrapper {
-    position: absolute;
-    top: 29%;
+    position: relative;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
 
     .title {
         text-transform: uppercase;
+        text-align: center;
         margin-bottom: 0.7em;
     }
 
@@ -15,6 +16,7 @@
             color: var(--clr-accent-red);
             font-size: var(--font-sizing);
             padding-bottom: 0.5em;
+            cursor: pointer;
         }
 
         &-name:last-of-type {

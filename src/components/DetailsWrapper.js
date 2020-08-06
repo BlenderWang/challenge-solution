@@ -18,7 +18,9 @@ const DetailsWrapper = () => {
     const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
 
     // hop to certain page
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
 
     const maxPage = Math.ceil(items.length / itemsPerPage);
 

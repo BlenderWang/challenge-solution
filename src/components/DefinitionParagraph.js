@@ -1,7 +1,7 @@
 import React from "react";
 
 const DefinitionParagraph = ({ paragraph }) => {
-    return <p className="definition--body hidden">{paragraph}</p>;
+    return <p className="definitio hidden">{paragraph}</p>;
 };
 
 export default DefinitionParagraph;

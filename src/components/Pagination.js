@@ -23,6 +23,7 @@ const Pagination = ({ itemsPerPage, totalItems, jump, onPrev, onNext }) => {
                 {pageNumbers.map((page) => (
                     <button
                         key={page}
+                        active={page}
                         onClick={() => {
                             jump(page);
                         }}
