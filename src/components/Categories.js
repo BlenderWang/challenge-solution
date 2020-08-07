@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import dummyData from "../dummyData";
 import Category from "./Category";
-import DefinitionParagraph from "./DefinitionParagraph";
+// import DefinitionParagraph from "./DefinitionParagraph";
 import "./categories.scss";
 import "./definition.scss";
 
-const Categories = () => {
+const Categories = ({ title, children }) => {
+    const [showDefinition, setShowDefinition] = useState(false);
+    const [showDefinitionText, setDefinitionText] = useState("");
+
+    const toggleDefinition = () => {
+        setShowDefinition(!showDefinition);
+    };
+
+    const setDefinition = (defText) => {
+        setDefinitionText(defText);
+    };
+
     return (
         <>
             <div className="categories-wrapper">
@@ -17,7 +28,9 @@ const Categories = () => {
                             <Category
                                 key={category.id}
                                 category={category}
-                                onClick={() => console.log(category)}
+                                onClick={() => {
+                                    setDefinition(category.definition);
+                                }}
                             />
                         ))}
                 </div>
@@ -29,12 +42,14 @@ const Categories = () => {
                 </div>
 
                 <div className="definition--body">
-                    {dummyData.categories.map((category) => (
+                    {showDefinitionText}
+                    {/* {dummyData.categories.map((category) => (
                         <DefinitionParagraph
                             paragraph={category.definition}
                             key={category.id}
+                            showParagraph={showDefinition}
                         />
-                    ))}
+                    ))} */}
                 </div>
             </div>
         </>

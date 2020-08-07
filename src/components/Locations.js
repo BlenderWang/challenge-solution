@@ -4,7 +4,7 @@ import LocationBtn from "./LocationBtn";
 import "./locations.scss";
 
 const Locations = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const [color, setColor] = useState(false);
     // const [btnClicked, setBtnClicked] = useState(false);
 
@@ -22,7 +22,7 @@ const Locations = () => {
     };
 
     useEffect(() => {
-        window.addEventListener("click", filterLocation);
+        //window.addEventListener("click", filterLocation);
     }, []);
 
     return (
@@ -36,8 +36,7 @@ const Locations = () => {
                 <div
                     className={
                         isOpen ? "locations-btns open" : "locations-btns"
-                    }
-                >
+                    }>
                     {dummyData.locations.map((location) => (
                         <LocationBtn
                             key={location}
