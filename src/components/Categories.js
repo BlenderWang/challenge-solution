@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import dummyData from "../dummyData";
 import Category from "./Category";
-// import DefinitionParagraph from "./DefinitionParagraph";
 import "./categories.scss";
 import "./definition.scss";
 
-const Categories = ({ title, children }) => {
-    const [showDefinition, setShowDefinition] = useState(false);
+const Categories = () => {
     const [showDefinitionText, setDefinitionText] = useState("");
-
-    const toggleDefinition = () => {
-        setShowDefinition(!showDefinition);
-    };
 
     const setDefinition = (defText) => {
         setDefinitionText(defText);
@@ -41,16 +35,7 @@ const Categories = ({ title, children }) => {
                     <h6>Definition</h6>
                 </div>
 
-                <div className="definition--body">
-                    {showDefinitionText}
-                    {/* {dummyData.categories.map((category) => (
-                        <DefinitionParagraph
-                            paragraph={category.definition}
-                            key={category.id}
-                            showParagraph={showDefinition}
-                        />
-                    ))} */}
-                </div>
+                <div className="definition--body">{showDefinitionText}</div>
             </div>
         </>
     );

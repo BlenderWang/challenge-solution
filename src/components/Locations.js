@@ -16,10 +16,9 @@ const Locations = () => {
         setColor(!color);
     };
 
-    const filterLocation = () => {
+    /* const filterLocation = () => {
         // dummyData.details.filter(detail => detail.location)
-        console.log("filter");
-    };
+    }; */
 
     useEffect(() => {
         //window.addEventListener("click", filterLocation);
@@ -36,7 +35,8 @@ const Locations = () => {
                 <div
                     className={
                         isOpen ? "locations-btns open" : "locations-btns"
-                    }>
+                    }
+                >
                     {dummyData.locations.map((location) => (
                         <LocationBtn
                             key={location}

@@ -163,7 +163,7 @@ const dummyData = {
             tempor. I’ve worked with many professional film teams.`,
             tags: getRandomCategories(3),
             skills: Math.floor(Math.random() * 1000),
-            location: getRandomCity(3),
+            location: "Berlin, Germany",
         },
     ],
     categories: [

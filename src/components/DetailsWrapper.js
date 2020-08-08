@@ -34,7 +34,10 @@ const DetailsWrapper = () => {
 
     return (
         <div>
-            <Details details={currentItems} />
+            <Details
+                details={currentItems}
+                location={dummyData.details.location}
+            />
             <Pagination
                 itemsPerPage={itemsPerPage}
                 totalItems={items.length}
