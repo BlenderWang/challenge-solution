@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./components/Header";
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
-// import Definition from "./components/Definition";
 import DetailsWrapper from "./components/DetailsWrapper";
 import Locations from "./components/Locations";
 import Categories from "./components/Categories";
@@ -20,7 +19,6 @@ function App() {
                 </div>
                 <Locations />
                 <Categories />
-                {/* <Definition /> */}
                 <DetailsWrapper />
             </main>
             <Footer />

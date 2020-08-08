@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext, useReducer } from "react";
 import dummyData from "../dummyData";
 import Details from "./Details";
 import Pagination from "./Pagination";
+import AppContext from "../context";
+import reducer from "../reducer";
 
 const DetailsWrapper = () => {
     const [items, setItems] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [location, setLocation] = useState("");
     const itemsPerPage = 3;
+
+    const state = useContext(AppContext);
+    //const [state, dispatch] = useReducer(reducer, istate);
 
     useEffect(() => {
         setItems(dummyData.details);
@@ -32,12 +38,17 @@ const DetailsWrapper = () => {
         setCurrentPage((currentPage) => Math.max(currentPage - 1, 1));
     };
 
+    const test = () => {
+        //let { state } = state;
+        console.log(state.currentLocation);
+    };
+
     return (
         <div>
-            <Details
-                details={currentItems}
-                location={dummyData.details.location}
-            />
+            fff: {state.state.currentLocation}
+            <br />
+            sssssss: {test()}
+            <Details details={currentItems} location={location} />
             <Pagination
                 itemsPerPage={itemsPerPage}
                 totalItems={items.length}

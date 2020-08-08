@@ -1,28 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext, useReducer } from "react";
 import dummyData from "../dummyData";
 import LocationBtn from "./LocationBtn";
+import AppContext from "../context";
+import reducer from "../reducer";
 import "./locations.scss";
 
 const Locations = () => {
     const [isOpen, setIsOpen] = useState(true);
-    const [color, setColor] = useState(false);
-    // const [btnClicked, setBtnClicked] = useState(false);
+    const [currentLocation, setLocation] = useState("All Cities");
+    const initialState = useContext(AppContext);
+    const [state, dispatch] = useReducer(reducer, initialState);
 
     const open = () => {
         setIsOpen(!isOpen);
     };
 
-    const changeColor = () => {
-        setColor(!color);
+    const filterLocation = (newLocation) => {
+        setLocation(newLocation);
+        dispatch({ type: "FILTER_LOCATION", payload: newLocation });
     };
-
-    /* const filterLocation = () => {
-        // dummyData.details.filter(detail => detail.location)
-    }; */
-
-    useEffect(() => {
-        //window.addEventListener("click", filterLocation);
-    }, []);
 
     return (
         <div className="location-wrapper">
@@ -35,14 +31,13 @@ const Locations = () => {
                 <div
                     className={
                         isOpen ? "locations-btns open" : "locations-btns"
-                    }
-                >
+                    }>
                     {dummyData.locations.map((location) => (
                         <LocationBtn
                             key={location}
                             text={location}
-                            color={color}
-                            onClick={changeColor}
+                            color={location === currentLocation ? true : false}
+                            onClick={() => filterLocation(location)}
                         />
                     ))}
                 </div>
