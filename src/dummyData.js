@@ -30,7 +30,7 @@ const dummyData = {
             tempor. I’ve worked with many professional film teams.`,
             tags: ["VFX Engineer, ", "3D Animation, ", "Editor +2"],
             skills: 667,
-            location: getRandomCity(3),
+            location: "Berlin, Germany",
         },
         {
             id: uuid(),
@@ -40,7 +40,7 @@ const dummyData = {
             tempor. I’ve worked with many professional film teams.`,
             tags: ["Motion Capture Artist, ", "Photographer"],
             skills: 722,
-            location: getRandomCity(3),
+            location: "Stockholm, Sweden",
         },
         {
             id: uuid(),
@@ -50,7 +50,7 @@ const dummyData = {
             tempor. I’ve worked with many professional film teams.`,
             tags: ["3D Animation, ", "VFX Engineer, ", "Sound Editor +2"],
             skills: 471,
-            location: getRandomCity(3),
+            location: "New York, USA",
         },
         {
             id: uuid(),
@@ -163,7 +163,7 @@ const dummyData = {
             tempor. I’ve worked with many professional film teams.`,
             tags: getRandomCategories(3),
             skills: Math.floor(Math.random() * 1000),
-            location: "Berlin, Germany",
+            location: getRandomCity(3),
         },
     ],
     categories: [

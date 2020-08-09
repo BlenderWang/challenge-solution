@@ -2,16 +2,12 @@ import React from "react";
 import Card from "./Card";
 import "./details.scss";
 
-const Details = ({ details, location }) => {
+const Details = ({ details }) => {
     return (
         <div className="details-container">
-            {details
-                .filter((data) => {
-                    return data.location.toLowerCase().includes(location);
-                })
-                .map((data) => (
-                    <Card key={data.id} data={data} />
-                ))}
+            {details.map((data) => (
+                <Card key={data.id} data={data} />
+            ))}
         </div>
     );
 };

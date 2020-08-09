@@ -1,15 +1,13 @@
-import React, { useState, useContext, useReducer } from "react";
+import React, { useState, useContext } from "react";
 import dummyData from "../dummyData";
 import LocationBtn from "./LocationBtn";
 import AppContext from "../context";
-import reducer from "../reducer";
 import "./locations.scss";
 
 const Locations = () => {
     const [isOpen, setIsOpen] = useState(true);
     const [currentLocation, setLocation] = useState("All Cities");
-    const initialState = useContext(AppContext);
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const { dispatch } = useContext(AppContext);
 
     const open = () => {
         setIsOpen(!isOpen);
