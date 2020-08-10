@@ -65,7 +65,9 @@
         .ul-right {
             right: 0;
             width: 65%;
+            display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 15px;
             justify-self: end;
         }
     }
