@@ -12,10 +12,13 @@ const SearchBar = () => {
         const value = e.target.value;
 
         try {
-            const searchResult = await dummyData.details.filter(
+            /* const searchResult = await dummyData.details.filter(
                 (detail) =>
                     detail.name.toLowerCase().includes(value) ||
                     detail.location.toLowerCase().includes(value)
+            ); */
+            const searchResult = await dummyData.details.map((name) =>
+                console.log(name)
             );
             console.log(value);
             console.log(searchResult);

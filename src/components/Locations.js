@@ -5,7 +5,7 @@ import AppContext from "../context";
 import "./locations.scss";
 
 const Locations = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     const [currentLocation, setLocation] = useState("All Cities");
     const { dispatch } = useContext(AppContext);
 
