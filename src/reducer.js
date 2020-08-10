@@ -5,6 +5,11 @@ export default function reducer(state, { type, payload }) {
                 ...state,
                 currentLocation: payload,
             };
+        case "UPDATE_ITEMS":
+            return {
+                ...state,
+                items: payload,
+            };
         default:
             return state;
     }

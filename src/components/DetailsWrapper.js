@@ -5,10 +5,10 @@ import Pagination from "./Pagination";
 import AppContext from "../context";
 
 const DetailsWrapper = () => {
-    const [items, setItems] = useState([]);
+    /* const [items, setItems] = useState([]); */
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 3;
-    const { state } = useContext(AppContext);
+    const { state, dispatch } = useContext(AppContext);
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
@@ -36,11 +36,15 @@ const DetailsWrapper = () => {
         setCurrentPage((currentPage) => Math.max(currentPage - 1, 1));
     };
 
-    const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
-    const maxPage = Math.ceil(items.length / itemsPerPage);
+    const currentItems = state.items.slice(indexOfFirstItem, indexOfLastItem);
+    const maxPage = Math.ceil(state.items.length / itemsPerPage);
 
     useEffect(() => {
-        setItems(filterItems(dummyData.details, state.currentLocation));
+        //setItems(filterItems(dummyData.details, state.currentLocation));
+        dispatch({
+            type: "UPDATE_ITEMS",
+            payload: filterItems(dummyData.details, state.currentLocation),
+        });
     }, [state.currentLocation]);
 
     return (
@@ -48,7 +52,7 @@ const DetailsWrapper = () => {
             <Details details={currentItems} />
             <Pagination
                 itemsPerPage={itemsPerPage}
-                totalItems={items.length}
+                totalItems={state.items.length}
                 jump={paginate}
                 onPrev={prev}
                 onNext={next}

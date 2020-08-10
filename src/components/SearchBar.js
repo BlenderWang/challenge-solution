@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import dummyData from "../dummyData";
+import AppContext from "../context";
 import Card from "./Card";
 import "./searchbar.scss";
 
@@ -7,22 +8,27 @@ const SearchBar = () => {
     const [query, setQuery] = useState("");
     const [results, setResults] = useState([]);
 
-    const fetchResults = async (e) => {
+    const { dispatch } = useContext(AppContext);
+
+    const fetchResults = (e) => {
         e.preventDefault();
-        const value = e.target.value;
+        console.log("query: " + query);
 
         try {
-            /* const searchResult = await dummyData.details.filter(
-                (detail) =>
-                    detail.name.toLowerCase().includes(value) ||
-                    detail.location.toLowerCase().includes(value)
-            ); */
-            const searchResult = await dummyData.details.map((name) =>
-                console.log(name)
-            );
-            console.log(value);
+            const searchResult = dummyData.details.filter((detail) => {
+                return (
+                    detail.name.toLowerCase().includes(query) ||
+                    detail.location.toLowerCase().includes(query) ||
+                    detail.tags.toString().toLowerCase().includes(query)
+                );
+            });
             console.log(searchResult);
-            setResults(searchResult);
+
+            // setResults(searchResult);
+            dispatch({
+                type: "UPDATE_ITEMS",
+                payload: searchResult,
+            });
             setQuery("");
         } catch (err) {
             console.log(err);
@@ -38,6 +44,7 @@ const SearchBar = () => {
                     name="query"
                     value={query}
                     onChange={(e) => {
+                        console.log(e.target.value);
                         setQuery(e.target.value);
                     }}
                     placeholder="Search"
@@ -45,7 +52,7 @@ const SearchBar = () => {
                 <i className="fas fa-search"></i>
             </form>
 
-            <div className="search-results">
+            <div>
                 {results.map((result) => (
                     <Card key={result.id} data={result} />
                 ))}
