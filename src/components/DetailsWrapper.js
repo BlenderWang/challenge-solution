@@ -5,7 +5,6 @@ import Pagination from "./Pagination";
 import AppContext from "../context";
 
 const DetailsWrapper = () => {
-    /* const [items, setItems] = useState([]); */
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 3;
     const { state, dispatch } = useContext(AppContext);
@@ -40,12 +39,11 @@ const DetailsWrapper = () => {
     const maxPage = Math.ceil(state.items.length / itemsPerPage);
 
     useEffect(() => {
-        //setItems(filterItems(dummyData.details, state.currentLocation));
         dispatch({
             type: "UPDATE_ITEMS",
             payload: filterItems(dummyData.details, state.currentLocation),
         });
-    }, [state.currentLocation]);
+    }, [dispatch, state.currentLocation]);
 
     return (
         <div>

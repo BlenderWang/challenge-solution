@@ -6,13 +6,12 @@ import "./searchbar.scss";
 
 const SearchBar = () => {
     const [query, setQuery] = useState("");
-    const [results, setResults] = useState([]);
+    const results = [];
 
     const { dispatch } = useContext(AppContext);
 
     const fetchResults = (e) => {
         e.preventDefault();
-        console.log("query: " + query);
 
         try {
             const searchResult = dummyData.details.filter((detail) => {
@@ -22,9 +21,7 @@ const SearchBar = () => {
                     detail.tags.toString().toLowerCase().includes(query)
                 );
             });
-            console.log(searchResult);
 
-            // setResults(searchResult);
             dispatch({
                 type: "UPDATE_ITEMS",
                 payload: searchResult,
@@ -44,7 +41,6 @@ const SearchBar = () => {
                     name="query"
                     value={query}
                     onChange={(e) => {
-                        console.log(e.target.value);
                         setQuery(e.target.value);
                     }}
                     placeholder="Search"
