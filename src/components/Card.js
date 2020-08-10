@@ -10,8 +10,8 @@ const Card = ({ data }) => {
                     backgroundImage: `url(${data.src})`,
                     backgroundPosition: "center 25%",
                     backgroundSize: "cover",
-                    width: "10rem",
-                    height: "10rem",
+                    width: "9rem",
+                    height: "9rem",
                     borderRadius: "5px",
                 }}
                 key={data.id}

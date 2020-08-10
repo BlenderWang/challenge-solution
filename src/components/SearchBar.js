@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-// import json_data from "../localData.json";
+import dummyData from "../dummyData";
 import Card from "./Card";
 import "./searchbar.scss";
-
-const jsonData = require("../localData.json");
 
 const SearchBar = () => {
     const [query, setQuery] = useState("");
@@ -11,13 +9,17 @@ const SearchBar = () => {
 
     const fetchResults = async (e) => {
         e.preventDefault();
+        const value = e.target.value;
 
         try {
-            const res = await jsonData;
-            // const data = res.map((result) => result.name);
-            // const data = await res.json();
-            console.log(res);
-            setResults(res);
+            const searchResult = await dummyData.details.filter(
+                (detail) =>
+                    detail.name.toLowerCase().includes(value) ||
+                    detail.location.toLowerCase().includes(value)
+            );
+            console.log(value);
+            console.log(searchResult);
+            setResults(searchResult);
             setQuery("");
         } catch (err) {
             console.log(err);
@@ -32,18 +34,18 @@ const SearchBar = () => {
                     type="text"
                     name="query"
                     value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="i.e. Berlin"
+                    onChange={(e) => {
+                        setQuery(e.target.value);
+                    }}
+                    placeholder="Search"
                 />
                 <i className="fas fa-search"></i>
             </form>
 
             <div className="search-results">
-                {results
-                    .filter((result) => result.location === { query })
-                    .map((result) => (
-                        <Card key={result.id} data={result} />
-                    ))}
+                {results.map((result) => (
+                    <Card key={result.id} data={result} />
+                ))}
             </div>
         </>
     );

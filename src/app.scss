@@ -75,8 +75,8 @@ i {
     }
 }
 
-.main {
-    min-height: calc(100vh - 7rem);
+.app {
+    min-height: calc(100vh - 100px);
 }
 
 // main page styling
@@ -85,6 +85,7 @@ i {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        margin: 0 15vw;
+        max-width: 60vw;
+        margin: 0 auto;
     }
 }

@@ -35,7 +35,11 @@ const Categories = () => {
                     <h6>Definition</h6>
                 </div>
 
-                <div className="definition--body">{showDefinitionText}</div>
+                <div className="definition--body">
+                    {!showDefinitionText
+                        ? dummyData.categories[0].definition
+                        : showDefinitionText}
+                </div>
             </div>
         </>
     );

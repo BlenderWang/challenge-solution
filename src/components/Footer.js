@@ -24,6 +24,11 @@ const Footer = () => {
                         <h3>About Skilldar</h3>
                     </Link>
                 </li>
+                <li>
+                    <Link to="/">
+                        <h3 className="yellow-heading">Get Started</h3>
+                    </Link>
+                </li>
             </ul>
         </footer>
     );
