@@ -12,8 +12,6 @@ const DetailsWrapper = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
-    let loc = "";
-
     const filterItems = (details, location) => {
         location = location.toLowerCase();
         if (location === "all cities") location = "";
@@ -21,8 +19,6 @@ const DetailsWrapper = () => {
         const filteredItems = details.filter((data) => {
             return data.location.toLowerCase().includes(location);
         });
-
-        console.log("filter");
 
         return filteredItems;
     };
@@ -40,22 +36,15 @@ const DetailsWrapper = () => {
         setCurrentPage((currentPage) => Math.max(currentPage - 1, 1));
     };
 
-    let currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
-    let maxPage = Math.ceil(items.length / itemsPerPage);
+    const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+    const maxPage = Math.ceil(items.length / itemsPerPage);
 
     useEffect(() => {
-        //setItems(dummyData.details);
-        loc = state.currentLocation;
         setItems(filterItems(dummyData.details, state.currentLocation));
-    }, []);
-
-    useEffect(() => {
-        console.log("nr 2");
-    });
+    }, [state.currentLocation]);
 
     return (
         <div>
-            {state.currentLocation}
             <Details details={currentItems} />
             <Pagination
                 itemsPerPage={itemsPerPage}
