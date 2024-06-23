@@ -1,27 +1,149 @@
-.header {
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 2rem 20vw;
+    width: 100%;
+    height: 12vh;
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: var(--clr-background-header);
+    border-bottom: 1px solid var(--clr-grey);
+    z-index: 10;
+}
+
+.ul-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transform: translateX(-2rem);
+
+    li:nth-of-type(2) {
+        padding-left: 10px;
+        transform: translateY(2px);
+    }
+}
+
+.ul-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: var(--clr-background-header);
     width: 100vw;
-    padding: 2rem;
-    border-bottom: 1px solid var(--clr-grey);
-    display: flex;
-    justify-content: space-between;
+    height: 100vh;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.2rem;
+    transform: translateX(100%);
+    transition: transform 0.35s ease-in;
 
-    .fa-hashtag {
-        display: none;
+    li {
+        margin: 1.5em 0;
     }
 
-    &--menu {
-        display: grid;
-        justify-items: center;
+    h4 {
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // justify-items: center;
+        // grid-gap: 10px;
+        display: flex;
         align-items: center;
+        font-size: 1.5rem;
+        color: var(--clr-accent-blue);
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: var(--clr-accent-red);
+        }
     }
 
-    .hidden {
-        display: none;
+    .fa-sign-in-alt {
+        margin-left: 5px;
+        color: var(--clr-accent-blue);
+
+        &:hover {
+            color: var(--clr-accent-red);
+        }
+    }
+}
+
+.open {
+    transform: translateX(0);
+}
+
+.fa-twitter-square,
+.fa-instagram {
+    font-size: 3rem;
+    transform: rotate(0);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--clr-accent-blue);
+        transform: rotate(360deg);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        height: 6vh;
+        padding: 2rem 10vw;
     }
 
-    &--icon-instagram {
-        width: 1.5rem;
+    .ul-right {
+        position: relative;
+        flex-direction: row;
+        transform: initial;
+        background: transparent;
+        width: initial;
+        height: initial;
+        padding: 0;
+
+        li + li {
+            margin-left: 10px;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+        }
+    }
+
+    .fa-twitter-square,
+    .fa-instagram {
+        font-size: 2rem;
+    }
+
+    .fa-sign-in-alt {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .navbar {
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid var(--clr-grey);
+
+        img {
+            width: auto;
+            height: 2rem;
+        }
+
+        i {
+            font-size: 2rem;
+        }
+
+        h4 {
+            font-size: 1.7rem;
+        }
     }
 }

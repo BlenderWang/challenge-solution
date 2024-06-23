@@ -5,32 +5,17 @@
     --clr-light: #a6a8ab;
     --clr-white: #eff2f5;
     --clr-accent-red: #db2c47;
+    --clr-accent-blue: #5078bf;
+    --clr-accent-green: #3adab7;
+    --clr-accent-yellow: #f98e00;
 
-    --font-roboto: "Roboto";
+    --font-roboto: "Roboto Condensed";
+    --font-sources: "Source Sans Pro";
 
     --font-sizing: 14px;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Raleway|Roboto|Roboto+Condensed&display=swap");
-
-// media queries mixins
-@mixin media-md {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
-}
-
-@mixin media-lg {
-    @media screen and (min-width: 1024px) {
-        @content;
-    }
-}
-
-@mixin media-xl {
-    @media screen and (min-width: 1600px) {
-        @content;
-    }
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap");
 
 // global
 html {
@@ -47,7 +32,7 @@ html {
 
 body {
     background: var(--clr-background);
-    font-family: var(--font-roboto);
+    font-family: var(--font-roboto), sans-serif;
     font-size: var(--font-sizing);
 }
 
@@ -63,7 +48,44 @@ h6 {
     color: var(--clr-light);
 }
 
+a {
+    text-decoration: none;
+    color: var(--clr-light);
+    transition: color 0.3s linear;
+
+    &:hover {
+        color: var(--clr-accent-red);
+    }
+}
+
 i {
     color: var(--clr-light);
     font-size: 1.5rem;
+}
+
+.fa-hashtag {
+    color: var(--clr-accent-red);
+    transform: rotate(0);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--clr-accent-blue);
+        transform: rotate(360deg);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.app {
+    min-height: calc(100vh - 100px);
+}
+
+// main page styling
+@media (min-width: 1100px) {
+    .section--top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        max-width: 60vw;
+        margin: 0 auto;
+    }
 }
